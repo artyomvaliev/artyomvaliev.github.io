@@ -1,0 +1,256 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+body {
+  margin: 10px 150px;
+  font-family: 'Montserrat', sans-serif;
+  background-color:azure;
+}
+
+.header {
+    width: 100%;
+    padding: 15px 0;
+  
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    font-size: 24px;
+    font-weight: 300;
+    color: gray;
+  }
+
+.me {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1230px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.me_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax( 290px,1fr));
+  grid-gap: 20px;
+}
+
+.about_me_briefly {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.my_title_briefly {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.my_links {
+    display: flex;
+  }
+  
+  .my_link {
+    margin-right: 10px;
+    font-size: 30px;
+    color: #000;
+  }
+  
+  .github:hover {
+    color: #6e5494;
+  }
+
+  .gmail:hover {
+    color: #c71610;
+  }
+
+  .telegram:hover {
+    color: #2AABEE;
+  }
+
+  .itsme {
+    width: 400px;
+    height: 400px;
+    justify-self: center;
+  overflow: hidden;
+  border: 10px solid #fff;
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  animation: ava-animate 10s infinite alternate;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, .5);
+  }
+  
+  .itsme-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @keyframes ava-animate {
+    0% {
+      border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    }
+  
+    10% {
+      border-radius: 50% 50% 59% 41% / 40% 50% 50% 60% ;
+    }
+  
+    20% {
+      border-radius: 57% 43% 59% 41% / 40% 58% 42% 60% ;
+    }
+  
+    30% {
+      border-radius: 56% 44% 67% 33% / 38% 61% 39% 62%  ;
+    }
+
+    40% {
+      border-radius: 48% 52% 36% 64% / 56% 33% 67% 44%  ;
+    }
+  
+    50% {
+      border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%  ;
+    }
+  
+    60% {
+      border-radius: 48% 52% 36% 64% / 56% 33% 67% 44%  ;
+    }
+  
+    70% {
+      border-radius: 56% 44% 67% 33% / 38% 61% 39% 62%  ;
+    }
+    80% {
+      border-radius: 57% 43% 59% 41% / 40% 58% 42% 60% ;
+    }
+  
+    90% {
+      border-radius: 50% 50% 59% 41% / 40% 50% 50% 60%  ;
+    }
+  
+    100% {
+      border-radius: 45% 55% 29% 71% / 72% 34% 66% 28%  ;
+    }
+  }
+  
+
+  .my_knowledge {
+    max-width: 1230px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 1.1;
+    margin-bottom: 2.5%;
+  }
+.arrow-button{
+  width: 1.7%;
+  height: 1.7%;
+
+}
+  .table{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax( 290px,1fr));
+    grid-gap: 20px;
+  }
+
+  .list_knowledges{
+    text-align: right;
+    margin-right:2%
+  }
+
+  .about_knowledges{
+    text-align: left;
+    margin-left:2%;
+    margin-top:2%;
+  }
+
+  .contact{
+    text-align: center;
+    padding: 23%;
+  }
+
+  .list_knowledge{
+    margin-bottom: 1%;
+  }
+
+.contactwthme{
+  font-size: 40px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+  
+  input, button {
+  font-family: 'Montserrat', sans-serif;
+    font-size: 0.875em;
+    width: 470px;
+    height: 50px;
+    padding: 0px 15px 0px 15px;
+    
+    background: transparent;
+    outline: none;
+    color: #000000;
+    
+    border: solid 1px #000000;
+    border-bottom: none;
+    
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+  }
+  
+  input:hover,  textarea:hover,  #submit:hover {
+    background: #000000;
+    color: #ffffff;
+  }
+  
+  textarea {
+  font-family: 'Montserrat', sans-serif;
+    width: 470px;
+    max-width: 470px;
+    height: 110px;
+    max-height: 110px;
+    padding: 15px;
+    font-size: 0.875em;
+    background: transparent;
+    outline: none;
+    color: #000000;
+    border: solid 1px #000000;
+  }
+  input:hover::placeholder,  textarea:hover::placeholder,  #submit:hover::placeholder {
+    color: #ffffff;
+  }
+  input::placeholder, textarea::placeholder{
+    color: #000000;
+  }
+  
+  #submit {
+  font-family: 'Montserrat', sans-serif;
+    width: 470px;
+    padding: 0;
+    margin: -5px 0px 0px 0px;   
+    font-size: 0.875em;
+    color: #000000;
+    outline:none;
+    cursor: pointer;
+    border: solid 1px #000000;
+    border-top: none;
+  }
+  
+
+

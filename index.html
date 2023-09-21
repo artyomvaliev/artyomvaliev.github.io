@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="script.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    Задание от GIGASCHOOL
+  </title>
+
+  <!-- Подключаем шрифт -->
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- Подключаем иконки -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <!-- Подключаем файл со стилями -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<header class="header">
+    <span class="logo">
+        Валиев Артём
+    </span>
+</header>
+  <div class="me">
+    <div class="container" me_container>
+        <div class="about_me_briefly">
+                <h1 class="my_title_briefly">
+                    Привет! Меня зовут Артём
+                </h1>
+                <p class="my_description_briefly">
+                    и я являюсь студентом Южно-Уральского государственного университета
+                </p>
+                <div class="my_links">
+                    <a href="https://github.com/artyomvaliev" class="my_link github"><i class='bx bxl-github'></i></a>
+                    <a href="mailto:valievartyom@gmail.com" class="my_link gmail"><i class='bx bxl-gmail'></i></a>
+                    <a href="https://t.me/gjyjcgjdtyfv" class="my_link telegram"><i class='bx bxl-telegram'></i></a>
+                </div> 
+        </div>
+    </div>
+            <div class="itsme">
+            <img class="itsme-img" src="helloitsme.png" alt="">
+          </div>
+  </div>
+  <div class="my_knowledge" onclick="showHideKnowledge()">
+    Обо мне
+    <img src="arrow.png" class="arrow-button show" id="showArrow">
+    <img src="arrow180.png" class="arrow-button hide" id="hideArrow" style="display: none;">
+  </div>
+  <div class="table" style="display: none;">
+    <div class="list_knowledges">
+        <p class="list_knowledge" onclick="showHideTable('knowledge')" >
+            <strong>
+                <img src="arrow90.png" class="arrow-button" id="selectArrow1">
+                Навыки
+            </strong>
+        </p>
+        <p class="list_knowledge" onclick="showHideTable('education')">
+            <strong>
+                <img src="arrow90.png" class="arrow-button" id="selectArrow2" style="display: none;">
+                Образование
+            </strong>
+        </p>
+    </div>
+    <div class="about_knowledges">
+        <div class="about_knowledge" id="knowledge">
+            <li>
+                <em>
+                    Языки программирования
+                </em>
+                <br>
+                    C#, JavaScript, SQL,Python, PHP
+            </li>
+            <li>
+                <em>
+                    Веб
+                </em>
+                <br>
+                    ASP.NET, HTML, CSS
+            </li>
+            <li>
+                <em>
+                    Моделирование
+                </em>
+                <br>
+                    UML, IDEF0, BPMN
+            </li>
+        </div>
+        <div class="about_knowledge" id="education" style="display: none;">
+            <li>
+                <em>
+                    Южно-Уральский государственный университет
+                </em>
+                <br>
+                    2018-2022
+                <br>
+                    ВШЭУ, Бакалавр прикладной информатики
+            </li>
+            <li>
+                <em>
+                    Южно-Уральский государственный университет
+                </em>
+                <br>
+                    2022-2024
+                <br>
+                    ВШЭУ, Магистр прикладной информатики
+            </li>
+        </div>
+    </div>
+  </div>
+  <div class="contact">
+    <h1 class="contactwthme">
+        Свяжить со мной!
+    </h1>
+    <form name="submit-to-google-sheet">
+        <input id="email" type="text" placeholder="ТВОЯ ПОЧТА" required><br>
+        <input id="name" type="text" placeholder="ТВОЁ ИМЯ"><br>
+        <textarea id="message" type="text" placeholder="ТВОЁ СООБЩЕНИЕ"></textarea><br>
+        <input id="submit" type="submit" value="ОТПРАВИТЬ">
+    </form>
+  </div>
+
+  <!-- Отправляем сообщение -->
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz2y7MaKmI7qWZx4NlS9xX1_T5lj_dIvoylP6oc-5c7d6aNSHmTA7zhutjtxi7T5hNOiQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => 
+    console.log('Success!', response))
+    .catch(error => console.error('Error!', error.message))
+})
+</script>
+
+</body>
+
+</html>

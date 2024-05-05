@@ -1,43 +1,31 @@
-function showHideKnowledge()
-{   
-    let tableSection = document.querySelector(".table");
-    let showArrow = document.querySelector("arrow-button show");
-    let hideArrow = document.querySelector("arrow-button hide");
-    if(tableSection.style.display=="grid")
-    {
-        tableSection.style.display="none";
-        showArrow.style.display="Inline";
-        hideArrow.style.display="none";
-    }
-    else if(tableSection.style.display=="none")
-    {
-        tableSection.style.display="grid";
-        tableSection.style.setAttribute("style", "grid-gap: 20px; grid-template-columns: repeat(auto-fit, minmax( 290px,1fr));");
-        showArrow.style.display="none";
-        hideArrow.style.display="Inline";
-    }
-
-}
-
 function showHideTable(tabName){
     var selectArrow1 = document.getElementById("selectArrow1");
     var selectArrow2 = document.getElementById("selectArrow2");
     let knowledge = document.getElementById('knowledge');
     let education = document.getElementById('education');
+    let abt = document.getElementById('abt');
     if(tabName==='knowledge')
     {
+        abt.style.flexDirection = "column";
+        education.style.transition = "0s";
+        knowledge.style.transition = "2s";
+        education.style.opacity = "0";
         knowledge.style.display="grid";
-        education.style.display="none";
+        knowledge.style.opacity = "1";
+        knowledge.style.scale = "1";
         selectArrow1.style.display="Inline";
         selectArrow2.style.display="none";
-        knowledge.style.setAttribute("style", "text-align: left;margin-left:2%;margin-top:2%;");
     }
     else
-    {
-        knowledge.style.display="none";
+    {   
+        abt.style.flexDirection = "column-reverse";
+        education.style.transition = "2s";
+        knowledge.style.transition = "0s";
+        knowledge.style.opacity = "0";
         education.style.display="grid";
+        education.style.opacity = "1";
+        education.style.scale = "1";
         selectArrow1.style.display="none";
-        selectArrow2.style.display="Inline";
-        education.style.setAttribute("style", "text-align: left;margin-left:2%;margin-top:2%;");
+        selectArrow2.style.display="Inline";  
     }
 }

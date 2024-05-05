@@ -27,6 +27,9 @@
     </span>
 </header>
   <div class="me">
+    <div class="itsme">
+        <img class="itsme-img" src="helloitsme.png" alt="">
+      </div>
     <div class="container" me_container>
         <div class="about_me_briefly">
                 <h1 class="my_title_briefly">
@@ -42,32 +45,27 @@
                 </div> 
         </div>
     </div>
-            <div class="itsme">
-            <img class="itsme-img" src="helloitsme.png" alt="">
-          </div>
   </div>
   <div class="my_knowledge" onclick="showHideKnowledge()">
     Обо мне
-    <img src="arrow.png" class="arrow-button show" id="showArrow">
-    <img src="arrow180.png" class="arrow-button hide" id="hideArrow" style="display: none;">
   </div>
-  <div class="table" style="display: none;">
+  <div class="table">
     <div class="list_knowledges">
-        <p class="list_knowledge" onclick="showHideTable('knowledge')" >
+        <p class="list_knowledge" id="knowledge1" onclick="showHideTable('knowledge')" >
             <strong>
                 <img src="arrow90.png" class="arrow-button" id="selectArrow1">
                 Навыки
             </strong>
         </p>
-        <p class="list_knowledge" onclick="showHideTable('education')">
+        <p class="list_knowledge" id="education1" onclick="showHideTable('education')">
             <strong>
                 <img src="arrow90.png" class="arrow-button" id="selectArrow2" style="display: none;">
                 Образование
             </strong>
         </p>
     </div>
-    <div class="about_knowledges">
-        <div class="about_knowledge" id="knowledge">
+    <div class="about_knowledges" id="abt">
+        <div class="about_knowledge" id="knowledge"style="display: grid">
             <li>
                 <em>
                     Языки программирования
@@ -90,7 +88,7 @@
                     UML, IDEF0, BPMN
             </li>
         </div>
-        <div class="about_knowledge" id="education" style="display: none;">
+        <div class="about_knowledge" id="education" style="opacity: 0; display: grid">
             <li>
                 <em>
                     Южно-Уральский государственный университет
